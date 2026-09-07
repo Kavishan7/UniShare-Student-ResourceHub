@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UniShare | Centralized ICT Resource Platform</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+        :root {
+    --primary: #006c46;
+    --primary-container: #00b074;
+    --on-primary-container: #003a23;
+    --surface-container-lowest: #ffffff;
+    --on-surface-variant: #3d4a41;
+    --outline-variant: #bccabf;
+    --border-radius-xl: 0.75rem;
+}
+
+.text-primary-theme { 
+    color: var(--primary) !important; 
+}
+
+.bg-surface-container-lowest { 
+    background-color: var(--surface-container-lowest) !important; 
+}
+
+.navbar {
+    height: 80px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--outline-variant);
+}
+
+.nav-link {
+    color: var(--on-surface-variant);
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+}
+
+.nav-link.active {
+    color: var(--primary) !important;
+    border-bottom: 2px solid var(--primary);
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-container);
+    color: var(--on-primary-container);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    border-radius: var(--border-radius-xl);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 176, 116, 0.2);
+        }
+
+        .card-custom {
+            background: var(--surface-container-lowest);
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--border-radius-xl);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card-custom:hover {
+            transform: translateY(-4px);
+            color: inherit;
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .resource-item {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--outline-variant);
+            transition: background-color 0.2s ease;
+        }
+        .resource-item:last-child { border-bottom: none; }
+        .resource-item:hover { background-color: var(--surface-container-low); }
+
+        .file-icon {
+            width: 40px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            border: 1px solid transparent;
+        }
+
+        .badge-custom {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: var(--surface-container-low);
+            border-top: 1px solid var(--outline-variant);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+<section class="container mb-5">
+<div class="hero-section bg-surface-container-low p-4 p-md-5">
+<div class="hero-pattern-blob" style="top: -50px; right: -50px;"></div>
+<div class="hero-pattern-blob" style="bottom: -50px; left: -50px; background: rgba(86, 94, 116, 0.05);"></div>
+<div class="row align-items-center position-relative">
+<div class="col-md-6 text-center text-md-start">
+<span class="text-primary-theme fw-bold small mb-3 d-block text-uppercase tracking-wider" style="letter-spacing: 0.1em;">HERO BANNER</span>
+<h1 class="display-4 fw-bold mb-4">Find your notes in seconds</h1>
+<p class="lead text-on-surface-variant mb-5">Centralized ICT resources for university students. Discover papers, code, and guides tailored for your course.</p>
+<a class="btn btn-primary-custom btn-lg px-4 py-3 d-inline-flex align-items-center gap-2" href="Catalog.html">
+<span class="material-symbols-outlined">rocket_launch</span>
+                            Get started
+                        </a>
+</div>
+<div class="col-md-6 d-none d-md-block">
+<div class="text-center">
+<img alt="Academic Resources Visual" class="img-fluid rounded-4 shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4nu-RUf2kuEzUgR0ugNQfdPH6LlXJ1cKtWQXpod0hp-PF0wN7ZDDv-bqzUEgBavTLLN1p4k0x5jpkvNqL6fXFrWkgBK9DpT2C3DOEl35feadz5pCxBHEVBy-UTwZB1Iawls9MsC1cLr21G0kXpGarvK3KxQJaO4w70cg-l81nVpijNTHjOrft64zEqKqYIc_8BUijPEF-qUgrDKVIrprtsGdMcO7qbjbBGJTOZq1j_uqYscI7nAleAZpqXFc3za-gqfH06tgZVHjv" style="transform: rotate(3deg); max-width: 85%;"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>

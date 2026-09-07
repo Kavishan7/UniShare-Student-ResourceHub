@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - UniShare</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+        :root {
+            --primary: #006c46;
+            --primary-container: #00b074;
+            --on-primary-container: #003a23;
+            --secondary: #565e74;
+            --surface: #f8f9ff;
+            --surface-container: #e5eeff;
+            --surface-container-low: #eff4ff;
+            --surface-container-lowest: #ffffff;
+            --on-surface: #0b1c30;
+            --on-surface-variant: #3d4a41;
+            --outline-variant: #bccabf;
+            --border-radius-lg: 0.5rem;
+            --border-radius-xl: 0.75rem;
+            --custom-radius: 8px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--surface);
+            color: var(--on-surface);
+            min-h-screen: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        /* Reusing styles from SCREEN_15 for consistency */
+        .text-primary-theme { color: var(--primary) !important; }
+        .bg-primary-container { background-color: var(--primary-container) !important; color: var(--on-primary-container) !important; }
+        .bg-surface-container-lowest { background-color: var(--surface-container-lowest) !important; }
+        .bg-surface-container-low { background-color: var(--surface-container-low) !important; }
+        
+        .navbar {
+            height: 80px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--outline-variant);
+        }
+
+        .nav-link {
+            color: var(--on-surface-variant);
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary-container);
+            color: var(--on-primary-container);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            border-radius: var(--border-radius-xl);
+            transition: all 0.3s ease;
+        }
+        .btn-primary-custom:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 176, 116, 0.2);
+        }
+
+        /* Login Card Specifics */
+        .login-card {
+            background: var(--surface-container-lowest);
+            border: 1px solid var(--outline-variant);
+            border-radius: var(--custom-radius);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            max-width: 440px;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-container);
+            box-shadow: 0 0 0 0.25rem rgba(0, 176, 116, 0.1);
+        }
+
+        .input-group-text {
+            background-color: var(--surface-container-low);
+            border-color: var(--outline-variant);
+            color: var(--on-surface-variant);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #adb5bd;
+            font-size: 0.875rem;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--outline-variant);
+        }
+        .divider:not(:empty)::before { margin-right: .5em; }
+        .divider:not(:empty)::after { margin-left: .5em; }
+
+        footer {
+            background-color: var(--surface-container-low);
+            border-top: 1px solid var(--outline-variant);
+        }
+        .hover-primary:hover { color: var(--primary) !important; }
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+<main class="flex-grow-1 d-flex align-items-center justify-content-center py-5 mt-5">
+<div class="container d-flex flex-column align-items-center mt-5" data-purpose="login-container">
+<!-- Page Header -->
+<div class="text-center mb-4" data-purpose="page-header">
+<h1 class="h2 fw-bold mb-2">Login to your account</h1>
+<p class="text-muted">Access your saved resources and uploads</p>
+</div>
+<!-- Login Card -->
+<div class="login-card p-4 p-md-5" data-purpose="login-card">
+<form action="#" data-purpose="login-form" method="POST">
+<!-- Email Input -->
+<div class="mb-3">
+<label class="form-label small fw-semibold text-secondary" for="email">Email</label>
+<div class="input-group">
+<span class="input-group-text">
+<span class="material-symbols-outlined fs-5">alternate_email</span>
+</span>
+<input class="form-control" id="email" name="email" placeholder="name@rjt.ac.lk" required="" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="mb-3">
+<label class="form-label small fw-semibold text-secondary" for="password">Password</label>
+<div class="input-group">
+<span class="input-group-text">
+<span class="material-symbols-outlined fs-5">lock</span>
+</span>
+<input class="form-control" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="btn btn-outline-secondary border-outline-variant" data-purpose="toggle-password" type="button">
+<span class="material-symbols-outlined fs-5" id="password-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me & Forgot Password -->
+<div class="d-flex align-items-center justify-content-between mb-4">
+<div class="form-check">
+<input class="form-check-input" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="form-check-label small text-muted" for="remember-me">Remember me</label>
+</div>
+<a class="small fw-bold text-primary-theme text-decoration-none" href="#">Forgot password?</a>
+</div>
+<!-- Submit Button -->
+<button class="btn btn-primary-custom w-100 mb-4" type="submit">
+                    Login
+                </button>
+<!-- Divider -->
+<div class="divider mb-4">OR</div>
+<!-- Register Link -->
+<div class="text-center">
+<p class="small text-muted mb-0">
+                        Don't have an account? 
+                        <a class="fw-bold text-primary-theme text-decoration-none ms-1" href="CreateAccount.html">Register here</a>
+</p>
+</div>
+</form>
+</div>
+</div>
+</main>
+</body>
+</html>
